@@ -74,9 +74,9 @@ export default function MyProfile() {
       {/* Header */}
       <header className="bg-white px-4 py-4 shadow-sm">
         <div className="flex items-center justify-between">
-          <Button onClick={handleBack} className="text-gray-700">
+          <button onClick={handleBack} className="text-gray-700">
             <ArrowLeft className="h-6 w-6" />
-          </Button>
+          </button>
           <h1 className="text-lg font-semibold text-gray-900">My Profile</h1>
           <div className="w-6" />
         </div>
@@ -96,15 +96,15 @@ export default function MyProfile() {
               </div>
             </div>
           </div>
-          <Button onClick={handleQRCode} className="text-gray-600">
+          <button onClick={handleQRCode} className="text-gray-600">
             <QrCode className="h-6 w-6" />
-          </Button>
+          </button>
         </div>
       </div>
 
       {/* My Size Card */}
       <div className="bg-white mx-4 mt-4 rounded-lg shadow-sm">
-        <Button 
+        <button 
           onClick={() => setShowSizeModal(true)}
           className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
         >
@@ -114,7 +114,7 @@ export default function MyProfile() {
             <span className="text-gray-400">👗</span>
           </div>
           <ChevronRight className="h-5 w-5 text-gray-400" />
-        </Button>
+        </button>
         
         <div className="px-4 pb-4">
           <div className="flex space-x-2">
@@ -129,7 +129,7 @@ export default function MyProfile() {
 
       {/* My Preference Card */}
       <div className="bg-white mx-4 mt-4 rounded-lg shadow-sm">
-        <Button 
+        <button 
           onClick={() => setShowPreferenceModal(true)}
           className="w-full p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
         >
@@ -138,7 +138,7 @@ export default function MyProfile() {
             <span className="font-medium text-gray-900">My Preference</span>
           </div>
           <ChevronRight className="h-5 w-5 text-gray-400" />
-        </Button>
+        </button>
         
         <div className="px-4 pb-4">
           <div className="flex flex-wrap gap-2 mb-2">
@@ -167,12 +167,12 @@ export default function MyProfile() {
       <Dialog open={showSizeModal} onOpenChange={setShowSizeModal}>
         <DialogContent className="max-w-sm mx-auto max-h-screen overflow-y-auto">
           <DialogHeader className="relative">
-            <Button 
+            <button 
               onClick={() => setShowSizeModal(false)}
               className="absolute right-0 top-0 text-gray-400 hover:text-gray-600"
             >
               ✕
-            </Button>
+            </button>
             <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg p-4 mb-4">
               <DialogTitle className="text-lg font-bold text-gray-900 mb-2">
                 Get Personalized Recommendations
@@ -189,7 +189,7 @@ export default function MyProfile() {
               <label className="block text-sm font-medium text-gray-900 mb-2">Gender*</label>
               <div className="flex space-x-2">
                 {["Female", "Male", "None Above"].map((option) => (
-                  <Button
+                  <button
                     key={option}
                     className={`flex-1 py-2 px-3 text-sm border rounded ${
                       option === "Male" 
@@ -198,7 +198,7 @@ export default function MyProfile() {
                     }`}
                   >
                     {option === "Female" && "♀"} {option === "Male" && "♂"} {option}
-                  </Button>
+                  </button>
                 ))}
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function MyProfile() {
               <label className="block text-sm font-medium text-gray-900 mb-2">Body Shape*</label>
               <div className="grid grid-cols-5 gap-2">
                 {["Trapezoid", "Triangle", "Oval", "Rectangle", "Inverted Triangle"].map((shape, index) => (
-                  <Button
+                  <button
                     key={shape}
                     className={`flex flex-col items-center p-2 border rounded ${
                       shape === "Rectangle" 
@@ -221,7 +221,7 @@ export default function MyProfile() {
                       <div className="w-4 h-8 bg-gray-400 rounded-sm"></div>
                     </div>
                     <span className="text-xs text-center">{shape}</span>
-                  </Button>
+                  </button>
                 ))}
               </div>
             </div>
@@ -248,12 +248,12 @@ export default function MyProfile() {
           </div>
 
           <div className="flex space-x-4 mt-6">
-            <Button variant="outline" className="flex-1" onClick={() => setShowSizeModal(false)}>
+            <button variant="outline" className="flex-1" onClick={() => setShowSizeModal(false)}>
               Cancel
-            </Button>
-            <Button className="flex-1 bg-gray-900 hover:bg-gray-800">
+            </button>
+            <button className="flex-1 bg-gray-900 hover:bg-gray-800">
               Confirm
-            </Button>
+            </button>
           </div>
         </DialogContent>
       </Dialog>
@@ -262,12 +262,12 @@ export default function MyProfile() {
       <Dialog open={showPreferenceModal} onOpenChange={setShowPreferenceModal}>
         <DialogContent className="max-w-sm mx-auto max-h-screen overflow-y-auto">
           <DialogHeader className="relative">
-            <Button 
+            <button 
               onClick={() => setShowPreferenceModal(false)}
               className="absolute right-0 top-0 text-gray-400 hover:text-gray-600"
             >
               ✕
-            </Button>
+            </button>
             <DialogTitle className="text-lg font-bold text-gray-900 text-center">
               My Preference
             </DialogTitle>
@@ -279,7 +279,7 @@ export default function MyProfile() {
                 <h3 className="font-medium text-gray-900 mb-3">{category.label}</h3>
                 <div className="flex flex-wrap gap-2">
                   {category.options.map((option) => (
-                    <Button
+                    <button
                       key={option}
                       onClick={() => togglePreference(category.id, option)}
                       className={`px-3 py-1 text-sm border rounded-full ${
@@ -289,19 +289,19 @@ export default function MyProfile() {
                       }`}
                     >
                       {option}
-                    </Button>
+                    </button>
                   ))}
                 </div>
               </div>
             ))}
           </div>
 
-          <Button 
+          <button 
             className="w-full mt-6 bg-gray-400 hover:bg-gray-500"
             onClick={() => setShowPreferenceModal(false)}
           >
             SAVE
-          </Button>
+          </button>
         </DialogContent>
       </Dialog>
     </div>

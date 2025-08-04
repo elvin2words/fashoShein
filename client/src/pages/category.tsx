@@ -24,11 +24,11 @@ export default function Category() {
       <header className="bg-white sticky top-0 z-50 shadow-sm">
         <div className="flex items-center justify-between px-4 py-3">
           {/* Left - Messages icon */}
-          <Button className="text-gray-600 hover:text-primary transition-colors">
+          <button className="text-gray-600 hover:text-primary transition-colors">
             <div className="w-6 h-6 bg-primary bg-opacity-10 rounded-full flex items-center justify-center">
               <span className="text-primary text-xs font-bold">M</span>
             </div>
-          </Button>
+          </button>
           
           {/* Center - Search Bar */}
           <div className="flex-1 mx-4">
@@ -39,20 +39,20 @@ export default function Category() {
                 className="w-full bg-gray-100 rounded-full pl-4 pr-12 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-all"
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
-                <Button className="text-gray-400 hover:text-primary transition-colors">
+                <button className="text-gray-400 hover:text-primary transition-colors">
                   <Camera className="h-4 w-4" />
-                </Button>
-                <Button className="text-gray-400 hover:text-primary transition-colors">
+                </button>
+                <button className="text-gray-400 hover:text-primary transition-colors">
                   <Search className="h-4 w-4" />
-                </Button>
+                </button>
               </div>
             </div>
           </div>
           
           {/* Right - Wishlist */}
-          <Button className="text-gray-600 hover:text-secondary transition-colors">
+          <button className="text-gray-600 hover:text-secondary transition-colors">
             <Heart className="h-5 w-5" />
-          </Button>
+          </button>
         </div>
       </header>
 
@@ -61,7 +61,7 @@ export default function Category() {
         <div className="overflow-x-auto hide-scrollbar">
           <div className="flex justify-around px-4 py-3 min-w-max">
             {mainCategories.map((category) => (
-              <Button
+              <button
                 key={category}
                 onClick={() => setActiveCategory(category.toLowerCase())}
                 className={cn(
@@ -72,7 +72,7 @@ export default function Category() {
                 )}
               >
                 {category}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
