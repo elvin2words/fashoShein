@@ -7,8 +7,7 @@ import SuperDealsSection from "@/components/super-deals-section";
 import ProductFeed from "@/components/product-feed";
 import BottomNavigation from "@/components/bottom-navigation";
 import { useState } from "react";
-import { useLocation } from "wouter";
-
+import { useLocation } from "wouter";   
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("all");
